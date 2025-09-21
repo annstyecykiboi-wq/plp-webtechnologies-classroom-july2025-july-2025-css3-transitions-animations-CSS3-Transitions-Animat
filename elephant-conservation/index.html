@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A web page about elephants with interactive sections, animations, and a conservation form.">
+    <title>Elephant Conservation Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Elephant Conservation Hub</h1>
+        <p>Discover the majesty of elephants and pledge to protect them.</p>
+    </header>
+
+    <main>
+        <!-- Facts Section -->
+        <section aria-labelledby="facts-heading">
+            <h2 id="facts-heading">Elephant Facts</h2>
+            <p>Learn about these gentle giants.</p>
+            <ul class="elephant-facts">
+                <li>Largest land mammals, weighing up to 14,000 lbs</li>
+                <li>Trunks have over 40,000 muscles for dexterity</li>
+                <li>Live in matriarchal herds led by females</li>
+                <li>Life expectancy: 60-70 years in the wild</li>
+            </ul>
+            <button id="animate-facts">Animate Facts</button>
+        </section>
+
+        <!-- Habitat Section -->
+        <section aria-labelledby="habitat-heading">
+            <h2 id="habitat-heading">Elephant Habitats</h2>
+            <p>Explore where elephants thrive.</p>
+            <table class="habitats-table">
+                <caption>Elephant Habitat Regions</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Species</th>
+                        <th scope="col">Region</th>
+                        <th scope="col">Environment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>African Savanna</td>
+                        <td>East/Southern Africa</td>
+                        <td>Grasslands, savannas</td>
+                    </tr>
+                    <tr>
+                        <td>African Forest</td>
+                        <td>Central/West Africa</td>
+                        <td>Rainforests</td>
+                    </tr>
+                    <tr>
+                        <td>Asian</td>
+                        <td>South/Southeast Asia</td>
+                        <td>Forests, grasslands</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section aria-labelledby="media-heading">
+            <h2 id="media-heading">Elephant Media</h2>
+            <p>View elephants in their natural habitats.</p>
+            <div class="media-container">
+                <figure>
+                    <img src="https://via.placeholder.com/400x300?text=Elephant" alt="Elephant walking in savanna">
+                    <figcaption>Elephant in the wild</figcaption>
+                </figure>
+                <figure>
+                    <video controls aria-label="Video of an elephant herd">
+                        <source src="https://archive.org/download/BigBuckBunny_124/BigBuckBunny_124.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Elephant herd in action</figcaption>
+                </figure>
+            </div>
+            <button id="animate-media">Animate Media</button>
+        </section>
+
+        <!-- Form Section -->
+        <section aria-labelledby="form-heading">
+            <h2 id="form-heading">Pledge for Elephant Conservation</h2>
+            <p>Join our efforts to protect elephants.</p>
+            <form id="conservation-form">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pledge Details</legend>
+                    <label for="pledge-type">Pledge Type <span aria-hidden="true">*</span></label>
+                    <select id="pledge-type" name="pledge_type">
+                        <option value="">Select an option</option>
+                        <option value="donation">Donation</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="advocate">Advocate</option>
+                    </select>
+
+                    <label for="message">Message <span aria-hidden="true">*</span></label>
+                    <textarea id="message" name="message" rows="5"
+                        placeholder="Your pledge for elephant conservation"></textarea>
+                </fieldset>
+
+                <label for="date">Pledge Date</label>
+                <input type="text" id="date" name="date" value="2025-09-21" readonly>
+
+                <label><input type="checkbox" id="newsletter" name="newsletter" value="yes"> Receive elephant
+                    updates</label>
+
+                <button type="submit">Submit Pledge</button>
+            </form>
+            <p id="form-status" class="status-message">Pledge status will appear here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Elephant Conservation Hub. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

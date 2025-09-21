@@ -1,0 +1,240 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e8ecef;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b5e7a;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+header:hover {
+    transform: scale(1.02);
+    background-color: #3a4b63;
+}
+
+/* Section Styling */
+main section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2 {
+    color: #4b5e7a;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color: #3a4b63;
+}
+
+/* Facts List with Keyframe Animation */
+.elephant-facts {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.elephant-facts li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.elephant-facts.animated li {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Table Styling */
+.habitats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.habitats-table th,
+.habitats-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.habitats-table th {
+    background-color: #d7dde5;
+    font-weight: bold;
+}
+
+.habitats-table tr:hover td {
+    background-color: #e8ecef;
+}
+
+.habitats-table caption {
+    padding: 10px;
+    font-weight: bold;
+    color: #4b5e7a;
+}
+
+/* Media Container with Flexbox and Animation */
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.media-container figure {
+    margin: 0;
+    max-width: 400px;
+}
+
+.media-container img,
+.media-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.media-container.animated img,
+.media-container.animated video {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Form Styling */
+#conservation-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+fieldset:hover {
+    border-color: #4b5e7a;
+}
+
+legend {
+    font-weight: bold;
+    color: #4b5e7a;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4b5e7a;
+    box-shadow: 0 0 5px rgba(75, 94, 122, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"],
+#animate-facts,
+#animate-media {
+    background-color: #4b5e7a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover,
+#animate-facts:hover,
+#animate-media:hover {
+    background-color: #3a4b63;
+    transform: scale(1.05);
+}
+
+.status-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    background-color: #d7dde5;
+    border-radius: 8px;
+    margin-top: 30px;
+}
